@@ -148,6 +148,18 @@
   footer .f-links a:hover{color:var(--gold-bright);opacity:1}
   footer .f-copy{font-size:.85rem;opacity:.6;border-top:1px solid rgba(247,240,220,.15);padding-top:24px;margin-top:10px}
 
+  /* ---------- WHATSAPP FAB ---------- */
+  .wa-fab{
+    position:fixed;bottom:102px;right:24px;z-index:200;
+    width:60px;height:60px;border-radius:50%;
+    background:#25D366;border:4px solid #fff;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 26px rgba(0,0,0,.3);
+    transition:transform .25s;
+  }
+  .wa-fab:hover{transform:scale(1.1)}
+  .wa-fab svg{width:32px;height:32px;fill:#fff}
+
   /* ---------- CHATBOT ---------- */
   .chat-fab{
     position:fixed;bottom:24px;right:24px;z-index:200;
@@ -237,7 +249,7 @@
     <p class="lead">Birria, sobrebarriga, chorizo, chicharrón y más. Tacos auténticos hechos con amor, directo a tu mesa o a tu casa.</p>
     <div class="hero-ctas">
       <a href="#menu" class="btn btn-primary">Ver el menú 🌮</a>
-      <a href="#info" class="btn btn-outline">Pedir a domicilio 🛵</a>
+      <a href="https://wa.me/573107754715?text=%C2%A1Hola%20Fat%20Taco!%20%F0%9F%8C%AE%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="btn btn-outline">Pedir a domicilio 🛵</a>
     </div>
   </div>
 </header>
@@ -344,14 +356,20 @@
       <div class="ic">🛵</div>
       <h3>Domicilio</h3>
       <p>Llevamos tus tacos calientitos hasta tu casa dentro de Bucaramanga.</p>
-      <a href="#" class="btn btn-primary" onclick="openChat();askBot('¿Cómo pido a domicilio?');return false;">Pedir ahora</a>
+      <a href="https://wa.me/573107754715?text=%C2%A1Hola%20Fat%20Taco!%20%F0%9F%8C%AE%20Quiero%20hacer%20un%20pedido%20a%20domicilio" target="_blank" rel="noopener" class="btn btn-primary">Pedir por WhatsApp</a>
     </div>
     <div class="info-card">
       <div class="ic">📍</div>
       <h3>Dónde estamos</h3>
       <p>Bucaramanga, Colombia 🇨🇴</p>
-      <a href="https://maps.google.com/?q=Fat+Taco+Bucaramanga" target="_blank" rel="noopener" class="btn map-btn">Ver en Google Maps</a>
+      <a href="https://maps.app.goo.gl/7QSCZVTdYEDWu4JS9" target="_blank" rel="noopener" class="btn map-btn">Ver en Google Maps</a>
     </div>
+  </div>
+  <div style="max-width:1000px;margin:34px auto 0;border-radius:22px;overflow:hidden;border:3px solid var(--burgundy);box-shadow:0 14px 40px rgba(123,30,59,.15)">
+    <iframe
+      src="https://maps.google.com/maps?q=7.1064431,-73.1367436&z=16&output=embed"
+      width="100%" height="340" style="border:0;display:block" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Fat Taco"></iframe>
   </div>
 </section>
 
@@ -363,11 +381,17 @@
     <a href="#about">Nosotros</a>
     <a href="#menu">Menú</a>
     <a href="#info">Horario</a>
-    <a href="https://maps.google.com/?q=Fat+Taco+Bucaramanga" target="_blank" rel="noopener">Ubicación</a>
+    <a href="https://wa.me/573107754715?text=%C2%A1Hola%20Fat%20Taco!%20%F0%9F%8C%AE" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://maps.app.goo.gl/7QSCZVTdYEDWu4JS9" target="_blank" rel="noopener">Ubicación</a>
   </div>
-  <p style="opacity:.85;margin-bottom:6px">🕕 Miércoles a Domingo · 6:30 PM – 11:00 PM &nbsp;|&nbsp; 📍 Bucaramanga, Colombia</p>
+  <p style="opacity:.85;margin-bottom:6px">📲 WhatsApp: +57 310 775 4715 &nbsp;|&nbsp; 🕕 Mié–Dom · 6:30–11:00 PM</p>
   <div class="f-copy">© 2026 Fat Taco · Taquería Búcara. Todos los derechos reservados. 🌮</div>
 </footer>
+
+<!-- ============ WHATSAPP FAB ============ -->
+<a class="wa-fab" id="waFab" href="https://wa.me/573107754715?text=%C2%A1Hola%20Fat%20Taco!%20%F0%9F%8C%AE%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.8-2.1-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4.1.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18.3c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.3 8.3 0 1 1 12 20.3z"/></svg>
+</a>
 
 <!-- ============ CHATBOT ============ -->
 <button class="chat-fab" id="chatFab" onclick="toggleChat()" aria-label="Abrir chat">💬</button>
@@ -419,6 +443,8 @@ function renderChips(){
 function toggleChat(){
   const open=chatWindow.classList.toggle('open');
   chatFab.style.display=open?'none':'flex';
+  const wa=document.getElementById('waFab');
+  if(wa)wa.style.display=open?'none':'flex';
   if(open&&!chatStarted){
     chatStarted=true;
     renderChips();
@@ -515,12 +541,12 @@ function getReply(raw){
     return "🕕 Nuestro horario es:<br><b>Miércoles a Domingo</b><br>de <b>6:30 PM a 11:00 PM</b>.<br><br>Lunes y martes cerramos para descansar. 😴";
 
   // Domicilio
-  if(has(t,'domicil','pedir','pedido','enviar','envio','llevar','llevan','delivery','ordenar','encargar','reservar'))
-    return "🛵 ¡Sí hacemos <b>domicilios</b> dentro de Bucaramanga! 🌮<br><br>Para pedir, contáctanos durante nuestro horario (<b>Mié–Dom, 6:30–11:00 PM</b>) y arma tu pedido. ¿Quieres ver el menú para ir escogiendo?";
+  if(has(t,'domicil','pedir','pedido','enviar','envio','llevar','llevan','delivery','ordenar','encargar','reservar','whatsapp','wasap','contacto','telefono','numero','llamar'))
+    return "🛵 ¡Sí hacemos <b>domicilios</b> dentro de Bucaramanga! 🌮<br><br>Escríbenos directo por WhatsApp para armar tu pedido:<br>👉 <a href='https://wa.me/573107754715?text=%C2%A1Hola%20Fat%20Taco!%20%F0%9F%8C%AE%20Quiero%20hacer%20un%20pedido' target='_blank' style='color:#25D366;font-weight:800'>Pedir por WhatsApp</a><br><br>Atendemos <b>Mié–Dom de 6:30 a 11:00 PM</b>. 😊";
 
   // Ubicación
   if(has(t,'ubicac','donde','direcc','lugar','queda','encuentr','local','sede','mapa','maps'))
-    return "📍 Estamos en <b>Bucaramanga, Colombia</b> 🇨🇴<br>Puedes encontrarnos en <a href='https://maps.google.com/?q=Fat+Taco+Bucaramanga' target='_blank' style='color:var(--coral);font-weight:700'>Google Maps</a>. ¡Te esperamos!";
+    return "📍 Estamos en <b>Bucaramanga, Colombia</b> 🇨🇴<br>Puedes encontrarnos en <a href='https://maps.app.goo.gl/7QSCZVTdYEDWu4JS9' target='_blank' style='color:var(--coral);font-weight:700'>Google Maps</a>. ¡Te esperamos!";
 
   // Recomendación
   if(has(t,'recomien','mejor','rico','favorito','famoso','estrella','sugier','tipico'))
